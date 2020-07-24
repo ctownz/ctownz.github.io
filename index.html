@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gage UI Input Component</title>
+        <style>
+            .center {
+                margin: auto;
+                width: 50%;
+                border: 1.5px solid #C6C9E8;
+                border-radius: 3.5px;
+                padding: 10px;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+            td,
+            th {
+                background-color: white;
+                border: 1px solid #999;
+                padding: 0.5rem;
+            }
+       
+</style>    
+<body>
+    <form>
+        <div style="margin: auto;width:50%;padding: 10px;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color:#485063;font-size:14pt;">
+            <p style="padding:10px;font-weight: bold;background-color: #90a4ae;color:#fff;">Gage UI, Input Component</p>
+            <div class="center">
+                <g-input label="Name" type="text" name="name" value=""></g-input>
+                <g-input direction="validate" label="Email" type="email" name="email" value=""></g-input>
+                <g-input label="Phone" type="tel" name="Phone" value=""></g-input>
+                <g-input type="date" direction="validate" label="Date of Birth" type="date" value="1980-12-25" name="DOB"></g-input>
+                <g-input width="88%" type="date" direction="validate" label="Date of Birth" type="date" name="DOB"></g-input>
+              
+            </div>
+            <p>Properties, Notes, Info</p>
+            <p>
+            <table style="background-color:#C6C9E8;">
+                <tr>
+                    <td>Component width is 100% of it's container</td>
+                </tr>
+                <tr>
+                    <td>Add direction="validate" to show error messages. Messages are not customizable</td>
+                </tr>
+                <tr>
+                    <td>Size: size="small" or size="medium" or size="large"</td>
+                </tr>
+                <tr>
+                    <td>To change the background color: bg="red"</td>
+                </tr>
+                <tr>
+                    <td>Text color is inherited.</td>
+                </tr>
+                <tr>
+                    <td>Border: border="4px solid red"</td>
+                </tr>
+                <tr>
+                    <td>border-radius: radius="1.5px"</td>
+                </tr>
+                <tr>
+                    <td>Value: value="John Doe" or for dates, value="1980-12-25"</td>
+                </tr>
+                <tr>
+                    <td>id and name: id="street", name="address2"</td>
+                </tr>
+                <tr>
+                    <td>Label: If you want to add a label, label="Email". The label appears above the input and is left
+                        aligned.</td>
+                </tr>
+                <tr>
+                    <td>To eliminate the 
+                        *:focus {
+                            outline: 0;
+                        }
+                    </td>
+                </tr>
+            </table>
+
+            <p>
+        </div>
+    </form>
+
+    <script src="g-input.js"></script>
+ 
+    <script>
+
+          var input = document.querySelector("input");
+          var ginputs = document.querySelector("g-input");
+          var xd = document.getElementsByTagName("g-input")[0];
+          var email = document.getElementsByTagName("g-input")[1];
+          var em = '';
+      
+    const component = document.getElementsByTagName("g-input")[0];
+    email.addEventListener('out', (event) => {
+            alert(event.detail);
+        })
+  
+         // email.onchange = (evt) => {
+           // alert(evt.target.value);
+           //em = evt.target.value;
+            //var x = document.getElementById("myText").value;
+
+           //alert(name.getAttribute('value'));
+           //var x = document.getElementsByTagName("g-input")[0].getAttribute("value");
+           //alert(xd.getAttribute("value"));
+         // } 
+
+/*           xd.onchange = (evt) => {
+            evt.target.value = 'cvredq';
+           var x = document.getElementsByTagName("g-input")[0].getAttribute("value");
+           alert(xd.getAttribute("value"));
+          } */ 
+
+
+            function doSomething(id) {
+              var img = document.getElementsByTagName("g-input")[0];
+               alert(img.getAttribute("value"));
+             
+            }
+     
+
+        
+              </script>
+</body>
+</html>
